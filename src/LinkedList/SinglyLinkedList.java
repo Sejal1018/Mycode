@@ -12,7 +12,7 @@ public class SinglyLinkedList {
         }
     }
     // to add the node at the last.
-    public static void insertLast(int data){
+    public  void insertLast(int data){
         Node newNode = new Node(data);
         if(head==null){
             head=newNode;
@@ -24,21 +24,39 @@ public class SinglyLinkedList {
         temp.next=newNode;
     }
     // to add the node at the beginning.
-    public static void insertBeginning(int data){
+    public  void insertBeginning(int data){
        Node newNode =new Node(data);
         if(head==null){
             head=newNode;
+        }else {
+            newNode.next = head;
+            head = newNode;
         }
-        newNode.next=head;
-        head=newNode;
+    }
+    public void dispaly(){
+        if(head==null){
+            System.out.println("null");
+        }
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.println("null");
     }
 
     public static void main(String[] args) {
+        SinglyLinkedList sll = new SinglyLinkedList();
+        sll.insertBeginning(4);
+        sll.insertLast(5);
+        sll.insertLast(6);
+        /*
         Node firstNode = new Node(4);
         Node secondNode = new Node(5);
         Node thirdNode = new Node(6);
         firstNode.next=secondNode;
         secondNode.next=thirdNode;
-
+*/
+        sll.dispaly();
     }
 }
