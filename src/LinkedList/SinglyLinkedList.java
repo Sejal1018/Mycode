@@ -11,14 +11,15 @@ public class SinglyLinkedList {
             this.next=null;
         }
     }
-    public static void insert(int data){
+    public static void insertLast(int data){
         Node newNode = new Node(data);
         if(head==null){
             head=newNode;
         }
-        while(head.next!=null){
-            head=head.next;
+       Node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
         }
-        head.next=newNode;
+        temp.next=newNode;
     }
 }
