@@ -32,4 +32,13 @@ public class SinglyLinkedList {
         newNode.next=head;
         head=newNode;
     }
+
+    public static void main(String[] args) {
+        Node firstNode = new Node(4);
+        Node secondNode = new Node(5);
+        Node thirdNode = new Node(6);
+        firstNode.next=secondNode;
+        secondNode.next=thirdNode;
+
+    }
 }
