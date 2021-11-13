@@ -33,6 +33,18 @@ public class SinglyLinkedList {
             head = newNode;
         }
     }
+    public void Searching(int data){
+        Node newNode = new Node(data);
+        if(head==null){
+            System.out.println("null");
+        }
+        Node temp=head;
+        while(temp.data==data){
+            System.out.println("Found");
+            temp=temp.next;
+            break;
+        }
+    }
     public void dispaly(){
         if(head==null){
             System.out.println("null");
@@ -44,7 +56,6 @@ public class SinglyLinkedList {
         }
         System.out.println("null");
     }
-
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.insertBeginning(4);
@@ -56,7 +67,8 @@ public class SinglyLinkedList {
         Node thirdNode = new Node(6);
         firstNode.next=secondNode;
         secondNode.next=thirdNode;
-*/
+         */
         sll.dispaly();
+        sll.Searching(6);
     }
 }
