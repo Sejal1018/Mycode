@@ -34,15 +34,22 @@ public class SinglyLinkedList {
         }
     }
     public void Searching(int data){
-        Node newNode = new Node(data);
         if(head==null){
-            System.out.println("null");
+            return;
         }
         Node temp=head;
-        while(temp.data==data){
-            System.out.println("Found");
+        boolean result=false;
+        while(temp!=null){
+            if (temp.data==data) {
+                result=true;
+                break;
+            }
             temp=temp.next;
-            break;
+        }
+        if (result==true) {
+            System.out.println(" Found");
+        }else{
+            System.out.println("NOt Found");
         }
     }
     public void dispaly(){
@@ -69,6 +76,6 @@ public class SinglyLinkedList {
         secondNode.next=thirdNode;
          */
         sll.dispaly();
-        sll.Searching(6);
+        sll.Searching(7);
     }
 }
