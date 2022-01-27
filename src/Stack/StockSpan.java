@@ -11,12 +11,10 @@ public class StockSpan {
         span[0] = 1;
         Stack<Integer> vis = new Stack<>();
         vis.push(0);
-
         for(int buil = 1; buil < ht.length; buil++) {
             while(!vis.isEmpty() && ht[vis.peek()] <= ht[buil]) {
                 vis.pop();
             }
-
             span[buil] = vis.isEmpty() ? buil + 1 : buil - vis.peek();
             vis.push(buil);
         }
