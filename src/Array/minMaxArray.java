@@ -1,10 +1,8 @@
 package Array;
 
-public class minAndMax {
+public class minMaxArray {
 
     public static void main(String[] args) {
-
-
 
     }
 }
